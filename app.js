@@ -1,17 +1,30 @@
 console.dir(document);
-document.getElementById("submitme").addEventListener("click", function(){
-    let betAmount = document.getElementById("betamount").value;
-    let bankRoll = document.getElementById("bankroll").value;
-    console.log(betAmount);
-    console.log(bankRoll);
-    let count = 0;
-    while (bankRoll > 0){
-        bankRoll -= betAmount;
-        betAmount *= 2;
-        count ++;
-        console.log(bankRoll);
-        console.log(betAmount);
-        console.log(count);
+document.getElementById("bet").addEventListener("input", function(){
+    calculate();
+});
+document.getElementById("bankroll").addEventListener("input", function(){
+    calculate();
+});
+
+function calculate(){
+    $('tbody').empty();
+    table = document.getElementById("outtable");
+    let count = 1;
+    let bankcurr = document.getElementById("bankroll").value;
+    let betcurr = document.getElementById("bet").value;
+    let betafter;
+    if(betcurr>= 1 && bankcurr >= 1){
+        while(bankcurr - betcurr > 0){
+            betafter = bankcurr-betcurr;
+            console.log("Bet:" + betcurr+"Bankrol: "+bankcurr);
+            $('tbody').append('<tr><th scope="row">'+count+'</th><td>'+bankcurr+'</td><td>'+betcurr+'</td><td>'+betafter+'</td</tr>');
+            bankcurr=betafter;
+            betcurr *=2;
+            count++;
+        }
+        betafter = bankcurr-betcurr;
+        $('tbody').append('<tr class="bg-danger"><th scope="row">'+count+'</th><td>'+bankcurr+'</td><td>'+betcurr+'</td><td>'+betafter+'</td</tr>');
     }
-    document.getElementById("test").innerHTML = `You were able to take: ${count} consecutive losses.`;
-  });
+    
+    
+};

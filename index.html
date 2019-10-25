@@ -3,38 +3,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <div class="row header">
-            <div class="col-8 title">
-                <p>Martingale Betting Calculator</p>
-            </div>
-            <div class="col-2 options">
-                    <a href="#">Calculator</a>
-            </div>
-            <div class="col-2 options">
-                    <a href="#">About</a>
-            </div>
-        </div>
-        <div class="row input">
-            <div class="col">
-                <form>
-                    <div class="form-group">
-                        <label for="betamount">Please enter your bet amount</label>
-                        <input type="number" class="form-control" id="betamount" placeholder="Bet">
-                        <label for="bankroll">Please enter your total bankroll:</label>
-                        <input type="number" class="form-control" id="bankroll" placeholder="Bankroll">
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="submitme">Submit</button>
-                </form>
-            </div>
-        </div>
         <div class="row">
-            <p id="test">Testingthis</p>
+          <div class ="col-md-8 offset-md-2 mt-3">
+              <h1 class="display-4 text-center mb-3">Martingale Bet Calculator</h1>
+              <form>
+                  <div class="form-group">
+                    <input id="bankroll" type="number" class="form-control form-control-lg" placeholder="Enter Bankroll...">
+                  </div>
+              </form>
+              <form>
+                  <div class="form-group mt-3">
+                    <input id="bet" type="number" class="form-control form-control-lg" placeholder="Enter Bet Amount...">
+                  </div>
+              </form>
+              <table class="table table-striped" id="outtable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Bet #</th>
+                      <th scope="col">Bank</th>
+                      <th scope="col">Bet</th>
+                      <th scope="col">After Loss</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+          </div>
+          </div>
         </div>
     </div>
 

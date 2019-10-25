@@ -4,15 +4,9 @@ body{
 }
 
 
-th{
-    color: white;
-    border-top: none;
-}
+
 .table-striped td,
 .table-striped th {
     border: 0;
-}
-
-td{
     color:white;
 }

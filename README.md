@@ -1,6 +1,6 @@
 # Martingale Calculator Website
-Basic Martingale strategy bet calculator website
-Utilizes Bootstrap and JQuery.
+<P>Basic Martingale strategy bet calculator website</p>
+<p>This was built with JQuery 3.3.1 and Bootstrap 4.3.1<p>
 
 
 <p align="center">

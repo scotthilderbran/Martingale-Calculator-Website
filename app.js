@@ -8,7 +8,6 @@ document.getElementById("bankroll").addEventListener("input", function(){
 
 function calculate(){
     $('tbody').empty();
-    table = document.getElementById("outtable");
     let count = 1;
     let bankcurr = document.getElementById("bankroll").value;
     let betcurr = document.getElementById("bet").value;
